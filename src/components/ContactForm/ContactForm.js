@@ -75,7 +75,7 @@ ContactForm.propTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: conatact => dispatch(actions.addContact(contact)),
+  onSubmit: contact => dispatch(actions.addContact(contact)),
 });
 
 export default connect(null, mapDispatchToProps)(ContactForm);

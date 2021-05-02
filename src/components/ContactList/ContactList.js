@@ -32,11 +32,11 @@ ContactList.propTypes = {
   deleteContact: PropTypes.func.isRequired,
 };
 
-const getContactsToShow = ({filter, items}) => {
+const getContactsToShow = ({ filter, items }) => {
   const normalizedFilter = filter.toLowerCase();
-  return items.filter (({name}) =>
-  name ? name.toLowerCase().includes(normalizedFilter) : false;
-  )
+  return items.filter(({ name }) =>
+    name ? name.toLowerCase().includes(normalizedFilter) : false,
+  );
 };
 
 const mapStateToProps = state => ({
@@ -44,8 +44,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  deleteContact: contactId => dispatch(actions.deleteContact(contactId))
+  deleteContact: contactId => dispatch(actions.deleteContact(contactId)),
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactList);

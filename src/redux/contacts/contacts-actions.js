@@ -1,4 +1,4 @@
-import types from './contacts-actions';
+import types from './contacts-types';
 import { v4 as genId } from 'uuid';
 
 const addContact = ({ name, number, id }) => {
